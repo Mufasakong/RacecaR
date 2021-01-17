@@ -24,6 +24,7 @@ Sensorsystemet indsamler også anden data, end den, der bruges til at styre bile
 - Hvor mange frames bilen befinder sig i den hvide rabat,
 - hvor mange frames bilen kører i den forkerte retning og 
 - hvor hurtigt den kører en omgang. 
+
 Hver eneste gang framecounten når et punkt (500%) vil de autonome racerbiler blive nulstillet og udvikle sig på ny. 
 
 Vi anvender den her data til at bygge den genetiske algoritme.
