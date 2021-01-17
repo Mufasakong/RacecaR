@@ -26,6 +26,9 @@ Sensorsystemet indsamler også anden data, end den, der bruges til at styre bile
 - hvor hurtigt den kører en omgang. 
 
 Hver eneste gang framecounten når et punkt (500%) vil de autonome racerbiler blive nulstillet og udvikle sig på ny. 
+I vores Carsystem tilpasser den nye generation af autonome racerbiler den ældre generation og vi vil mere eller mindre se at
+racerbilerne vil succesfuldt køre fulde runder rundt om racerbanen sammen. Under processen af den genetiske tilpasning
+vil racerbilerne stå uden for mutationer der vil påvirke racerbilernes køresel. Programmet formår også at beregne den hurtigste omgang i hvor der køres.
 
 Vi anvender den her data til at bygge den genetiske algoritme.
 
