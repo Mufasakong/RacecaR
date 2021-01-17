@@ -46,7 +46,7 @@ void draw() {
           top2nd = j;
       }
 
-      if (carSystem.CarControllerList.get(i).sensorSystem.fitness<=carSystem.CarControllerList.get((int)top2nd).sensorSystem.fitness/10) {
+      if (carSystem.CarControllerList.get(i).sensorSystem.fitness<=carSystem.CarControllerList.get((int)top2nd).sensorSystem.fitness / 10) {
         carSystem.CarControllerList.remove(i);
         i--;
       }
@@ -54,7 +54,7 @@ void draw() {
     while (carSystem.CarControllerList.size() > 50) {
       int rest = 0;
       for (int j = 0; j < carSystem.CarControllerList.size(); j++) {
-        if (carSystem.CarControllerList.get(j).sensorSystem.fitness<carSystem.CarControllerList.get(rest).sensorSystem.fitness) {
+        if (carSystem.CarControllerList.get(j).sensorSystem.fitness < carSystem.CarControllerList.get(rest).sensorSystem.fitness) {
           rest = j;
         }
       }
@@ -62,7 +62,7 @@ void draw() {
     }
     int bestLapPlace = 0;
     for (int j =0; j < carSystem.CarControllerList.size(); j++) {
-      if (carSystem.CarControllerList.get(j).sensorSystem.lapTimeInFrames < carSystem.CarControllerList.get((int)bestLapPlace).sensorSystem.lapTimeInFrames && carSystem.CarControllerList.get(j).sensorSystem.lapTimeInFrames>120&&carSystem.CarControllerList.get(j).sensorSystem.whiteSensorFrameCount==0&&carSystem.CarControllerList.get(j).sensorSystem.clockWiseRotationFrameCounter>0) {
+      if (carSystem.CarControllerList.get(j).sensorSystem.lapTimeInFrames < carSystem.CarControllerList.get((int)bestLapPlace).sensorSystem.lapTimeInFrames && carSystem.CarControllerList.get(j).sensorSystem.lapTimeInFrames>120 && carSystem.CarControllerList.get(j).sensorSystem.whiteSensorFrameCount == 0 && carSystem.CarControllerList.get(j).sensorSystem.clockWiseRotationFrameCounter > 0) {
         bestLapPlace = j;
         bestLapTime = carSystem.CarControllerList.get(j).sensorSystem.lapTimeInFrames;
       }

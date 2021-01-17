@@ -40,7 +40,7 @@ class CarSystem {
           }
         }
       children.add(new CarController());
-      for (int i =0; i<8; i++) {
+      for (int i =0; i < 8; i++) {
         if (parents.get(0).hjerne.weights[i] < parents.get(1).hjerne.weights[i])
           children.get(children.size()-1).hjerne.weights[i]=random(parents.get(0).hjerne.weights[i], parents.get(1).hjerne.weights[i]);
         if (parents.get(1).hjerne.weights[i]<parents.get(0).hjerne.weights[i])
@@ -51,29 +51,29 @@ class CarSystem {
           children.get(children.size()-1).hjerne.weights[i]=random(-children.get(children.size()-1).varians, children.get(children.size()-1).varians);
       }
 
-      for (int i =0; i<3; i++) {
+      for (int i =0; i < 3; i++) {
         if (parents.get(0).hjerne.biases[i]<parents.get(1).hjerne.biases[i])
           children.get(children.size()-1).hjerne.biases[i]=random(parents.get(0).hjerne.biases[i], parents.get(1).hjerne.biases[i]);
         if (parents.get(1).hjerne.biases[i]<parents.get(0).hjerne.biases[i])
           children.get(children.size()-1).hjerne.biases[i]=random(parents.get(1).hjerne.biases[i], parents.get(0).hjerne.biases[i]);
         if (parents.get(0).hjerne.biases[i]==parents.get(1).hjerne.biases[i])
-          children.get(children.size()-1).hjerne.biases[i]=parents.get(0).hjerne.biases[i];
-        if (random(1)<mutationRate)
-          children.get(children.size()-1).hjerne.biases[i]=random(-children.get(children.size()-1).varians, children.get(children.size()-1).varians);
+          children.get(children.size()-1).hjerne.biases[i] = parents.get(0).hjerne.biases[i];
+        if (random(1) < mutationRate)
+          children.get(children.size()-1).hjerne.biases[i] = random(-children.get(children.size()-1).varians, children.get(children.size()-1).varians);
       }
     }
-    for (int i = 0; i<CarControllerList.size(); i++) {
+    for (int i = 0; i < CarControllerList.size(); i++) {
       children.add(CarControllerList.get(i));
     }
     CarControllerList.clear();
-    for (int i = 0; i<children.size(); i++) {
+    for (int i = 0; i < children.size(); i++) {
       CarControllerList.add(children.get(i));
     }
-    for (int i = 0; i<CarControllerList.size(); i++) {
-      CarControllerList.get(i).sensorSystem.fitness=0;
-      CarControllerList.get(i).sensorSystem.whiteSensorFrameCount=0;
-      CarControllerList.get(i).sensorSystem.lapTimeInFrames=500;
-      CarControllerList.get(i).sensorSystem.time=0;
+    for (int i = 0; i < CarControllerList.size(); i++) {
+      CarControllerList.get(i).sensorSystem.fitness = 0;
+      CarControllerList.get(i).sensorSystem.whiteSensorFrameCount = 0;
+      CarControllerList.get(i).sensorSystem.lapTimeInFrames = 500;
+      CarControllerList.get(i).sensorSystem.time = 0;
       CarControllerList.get(i).sensorSystem.clockWiseRotationFrameCounter = 0;
       CarControllerList.get(i).bil.pos = new PVector(60, 232);
     }
