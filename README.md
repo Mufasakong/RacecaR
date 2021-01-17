@@ -2,7 +2,7 @@
 RACERBILS NEURO EVOLUTION
 Teknikfaget Digital Design og Udvikling - HCØ Lyngby, HTX
 
-## Opgavebeskrivelse:
+## Opgavebeskrivelse
 Byg et program til træning af en autonom virtuel racerbil, så den kan køre en omgang på kortest mulig tid.
 Opgaven kan laves i grupper på maksimalt 2 personer. Vælg en af disse to varianter: 
 ●	Ekspert: Byg alt selv, med inspiration fra udleveret kode (se nedenstående).
